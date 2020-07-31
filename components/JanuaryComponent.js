@@ -1,39 +1,32 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import Accordion from 'react-native-collapsible/Accordion';
 import * as Animatable from 'react-native-animatable';
 import { RIDDLES } from '../shared/riddles';
 
-class January extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeSections: [],
-      riddles: RIDDLES,
-    };
-  }
 
-  renderSectionTitle = section => {
-    return (
-      <View>
-        <Text>{section.name}</Text>
-      </View>
-    );
+export default class January extends Component {
+  state = {
+    activeSections: [],
+    riddles: RIDDLES,
+    isActive: false,
   };
 
-  renderHeader = (section, isActive) => {
+  renderHeader = (section, _, isActive) => {
     return (
       <Animatable.View
         duration={300}
         transition="backgroundColor"
-        style={{ backgroundColor: isActive ? 'rgba(255,255,255,1)' : 'rgba(245,252,255,1)' }}
+        style={[styles.header, isActive ? styles.active : styles.inactive]}
       >
-        <Text style={styles.headerText}>{section.riddle}</Text>
+        <Text style={styles.headerText}>
+          {section.day}: {section.riddle}
+        </Text>
       </Animatable.View>
     );
   };
 
-  renderAnswer = section => {
+  renderContent = (section, _, isActive) => {
     return (
       <Animatable.View
         duration={300}
@@ -53,20 +46,39 @@ class January extends Component {
 
   render() {
     return (
-      <Accordion
-        sections={this.state.riddles}
-        activeSections={this.state.activeSections}
-        renderSectionTitle={this.renderSectionTitle}
-        renderHeader={this.renderHeader}
-        renderContent={this.renderAnswer}
-        onChange={this.updateSections}
-      />
+      <ScrollView>
+        <Accordion
+          sections={this.state.riddles}
+          activeSections={this.state.activeSections}
+          renderSectionTitle={this.renderSectionTitle}
+          renderHeader={this.renderHeader}
+          renderContent={this.renderContent}
+          onChange={this.updateSections}
+        />
+      </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  button: {},
+  text: {
+    fontSize: 20,
+    padding: 20,
+  },
+  header: {
+    backgroundColor: '#F5FCFF',
+    padding: 20,
+  },
+  headerText: {
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: '500',
+  },
+  active: {
+    backgroundColor: '#16A085',
+    color: 'white',
+  },
+  inactive: {
+    backgroundColor: '#ECF0F1',
+  },
 });
-
-export default January;
