@@ -1,7 +1,7 @@
 export const RIDDLES = [
   {
     id: 0,
-    name: 'Day 1',
+    day: '1',
     color: '',
     difficulty: 'easy',
     featured: false,
@@ -10,7 +10,7 @@ export const RIDDLES = [
   },
   {
     id: 1,
-    name: 'Day 2',
+    day: '2',
     color: '',
     difficulty: 'easy',
     featured: false,
@@ -19,7 +19,7 @@ export const RIDDLES = [
   },
   {
     id: 2,
-    name: 'Day 3',
+    day: '3',
     color: '',
     difficulty: 'easy',
     featured: true,
@@ -28,7 +28,7 @@ export const RIDDLES = [
   },
   {
     id: 3,
-    name: 'Day 4',
+    day: '4',
     color: '',
     difficulty: 'easy',
     featured: true,
@@ -37,7 +37,7 @@ export const RIDDLES = [
   },
   {
     id: 4,
-    name: 'Day 5',
+    day: '5',
     color: '',
     difficulty: 'easy',
     featured: true,
@@ -46,7 +46,7 @@ export const RIDDLES = [
   },
   {
     id: 5,
-    name: 'Day 6',
+    day: '6',
     color: '',
     difficulty: 'easy',
     featured: true,
@@ -55,7 +55,7 @@ export const RIDDLES = [
   },
   {
     id: 6,
-    name: 'Day 7',
+    day: '7',
     color: '',
     difficulty: 'easy',
     featured: true,
@@ -64,7 +64,7 @@ export const RIDDLES = [
   },
   {
     id: 7,
-    name: 'Day 8',
+    day: '8',
     color: '',
     difficulty: 'easy',
     featured: true,
@@ -73,7 +73,97 @@ export const RIDDLES = [
   },
   {
     id: 8,
-    name: 'Day 9',
+    day: '9',
+    color: '',
+    difficulty: 'easy',
+    featured: true,
+    riddle: 'What month of the year has 28 days?',
+    answer: 'all of them'
+  },
+  {
+    id: 8,
+    day: '9',
+    color: '',
+    difficulty: 'easy',
+    featured: true,
+    riddle: 'What month of the year has 28 days?',
+    answer: 'all of them'
+  },
+  {
+    id: 8,
+    day: '9',
+    color: '',
+    difficulty: 'easy',
+    featured: true,
+    riddle: 'What month of the year has 28 days?',
+    answer: 'all of them'
+  },
+  {
+    id: 8,
+    day: '9',
+    color: '',
+    difficulty: 'easy',
+    featured: true,
+    riddle: 'What month of the year has 28 days?',
+    answer: 'all of them'
+  },
+  {
+    id: 8,
+    day: '9',
+    color: '',
+    difficulty: 'easy',
+    featured: true,
+    riddle: 'What month of the year has 28 days?',
+    answer: 'all of them'
+  },
+  {
+    id: 8,
+    day: '9',
+    color: '',
+    difficulty: 'easy',
+    featured: true,
+    riddle: 'What month of the year has 28 days?',
+    answer: 'all of them'
+  },
+  {
+    id: 8,
+    day: '9',
+    color: '',
+    difficulty: 'easy',
+    featured: true,
+    riddle: 'What month of the year has 28 days?',
+    answer: 'all of them'
+  },
+  {
+    id: 8,
+    day: '9',
+    color: '',
+    difficulty: 'easy',
+    featured: true,
+    riddle: 'What month of the year has 28 days?',
+    answer: 'all of them'
+  },
+  {
+    id: 8,
+    day: '9',
+    color: '',
+    difficulty: 'easy',
+    featured: true,
+    riddle: 'What month of the year has 28 days?',
+    answer: 'all of them'
+  },
+  {
+    id: 8,
+    day: '9',
+    color: '',
+    difficulty: 'easy',
+    featured: true,
+    riddle: 'What month of the year has 28 days?',
+    answer: 'all of them'
+  },
+  {
+    id: 8,
+    day: '9',
     color: '',
     difficulty: 'easy',
     featured: true,
