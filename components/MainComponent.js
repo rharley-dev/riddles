@@ -1,50 +1,18 @@
-import React, { Component } from 'react';
-import January from './JanuaryComponent';
-import { RIDDLES } from '../shared/riddles';
-import { StyleSheet, View } from 'react-native';
+import * as React from 'react';
+import Home from './HomeComponent';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-const JanuaryNavigator = createStackNavigator(
-  {
-      January: { screen: January },
-  }, 
-  {
-      initialRouteName: 'January',
-      navigationOptions: {
-          headerStyle: {
-              backgroundColor: '#76D7C4'
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-              color: '#fff'
-          }
-      }
-  }
-);
+const Stack = createStackNavigator();
 
-
-class Main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      riddles: RIDDLES,
-    };
-  }
-
-  render() {
-    return (
-    <View style={{flex: 1, paddingTop: Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight }}>
-      <JanuaryNavigator riddles={this.state.riddles} style={styles.container} />;
-    </View>
-    );
-  }
+function Main() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    color: 'red'
-  },
-});
 
 export default Main;
