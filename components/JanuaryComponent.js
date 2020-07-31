@@ -11,10 +11,6 @@ class January extends Component {
     };
   }
 
-  static navigationOptions = {
-    title: 'January',
-  };
-
   render() {
     const { navigate } = this.props.navigation;
     const renderJanuaryItem = ({ item }) => {
