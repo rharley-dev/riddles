@@ -3,13 +3,12 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import Accordion from 'react-native-collapsible/Accordion';
 import * as Animatable from 'react-native-animatable';
 import { RIDDLES } from '../shared/riddles';
-
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default class January extends Component {
   state = {
     activeSections: [],
     riddles: RIDDLES,
-    isActive: false,
   };
 
   renderHeader = (section, _, isActive) => {
@@ -19,9 +18,14 @@ export default class January extends Component {
         transition="backgroundColor"
         style={[styles.header, isActive ? styles.active : styles.inactive]}
       >
+        <LinearGradient
+          colors={['#4c669f', '#3b5998', '#192f6a']}
+          style={{ padding: 15, alignItems: 'center', borderRadius: 5}}
+        >
         <Text style={styles.headerText}>
           {section.day}: {section.riddle}
         </Text>
+        </LinearGradient>
       </Animatable.View>
     );
   };
